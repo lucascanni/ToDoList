@@ -33,7 +33,7 @@ async def get_task_by_id(id: str):
         return data
 
 @router.patch('/{id}', response_model=Task)
-async def update_task(id: str, task: TaskCreate, user_data: int= Depends(get_current_user)):
+async def update_task(id: str, task: TaskCreate):
     updatedTask = Task(id= id, **task.model_dump())
     data = db.child("Tasks").child(id).get().val()
     if data is None:
