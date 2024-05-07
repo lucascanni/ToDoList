@@ -1,12 +1,12 @@
-from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi import APIRouter, HTTPException, status
 from classe.schemas_dto import Task, TaskCreate
 import uuid
 from typing import List
 from database.firebase import db
 
 router = APIRouter(
-    prefix='/todos',
-    tags=['todos']
+    prefix='/todo',
+    tags=['todo']
 )
 
 @router.post('', response_model=Task, status_code=201)
