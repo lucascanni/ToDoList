@@ -15,3 +15,4 @@ def create_task():
         "priority":"High",
         "status":"In progress"
     })
+    return response.json()
