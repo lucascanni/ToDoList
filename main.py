@@ -2,7 +2,7 @@
 from fastapi import FastAPI
 
 # Import des routers
-from routers import router_todos
+from routers import router_todo
 
 # Import de la description de l'API
 from documentation.description import api_description
@@ -15,4 +15,4 @@ app = FastAPI(
 )
 
 # Ajout des routers
-app.include_router(router_todos.router)
+app.include_router(router_todo.router)
