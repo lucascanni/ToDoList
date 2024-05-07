@@ -14,7 +14,7 @@ async def create_task(task: TaskCreate):
     generatedId = str(uuid.uuid4())
     newTask = Task(id= generatedId, **task.model_dump())
     db.child("Tasks").child(generatedId).set(newTask.model_dump())
-    return newTask
+    return db.child("Tasks").child(generatedId).get().val()
 
 @router.get('', response_model=List[Task])
 async def get_all_tasks():
