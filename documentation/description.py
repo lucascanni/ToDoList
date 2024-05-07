@@ -7,5 +7,5 @@ Objectif : Développer une API CRUD (Créer, Lire, Mettre à jour, Supprimer) po
 Points de terminaison:
 
 - `/todos` : Lister toutes les tâches et ajouter une nouvelle tâche.
-- `/todos/{id}` : Récupérer, mettre à jour ou supprimer une tâche spécifique.
+- `/todos/{id}` : Récupère, mets à jour ou supprime une tâche spécifique.
 """
